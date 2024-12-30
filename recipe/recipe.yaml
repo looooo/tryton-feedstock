@@ -11,7 +11,7 @@ source:
   sha256: 5cf1435ccef620e09783462f03c2d4b383c28af88af91a608210d85bf9d256e6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install ./tryton --no-deps -vv
 
@@ -26,6 +26,7 @@ requirements:
     - python-dateutil
     - pygobject
     - gtk3
+    - librsvg
 
 tests:
   - python:
