@@ -1,6 +1,6 @@
 context:
   name: tryton
-  version: 7.4.3
+  version: 6.2.12
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/tryton/tryton/archive/refs/tags/tryton-${{ version }}.tar.gz
-  sha256: 41c6234d6db93a964bd08435b464b2ea58a4a5b25fe6793e9ea14af8522d1a45
+  sha256: 34f79859a8bb80a40832b521bdecf3fc8e77e53c7bf41398ea000d4e1c90189a
   patches:
     - patches/python313.patch
 
@@ -23,7 +23,7 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }}<=3.11
     - cairo
     - python-dateutil
     - pygobject
