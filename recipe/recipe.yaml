@@ -9,21 +9,19 @@ package:
 source:
   url: https://github.com/tryton/tryton/archive/refs/tags/tryton-${{ version }}.tar.gz
   sha256: 34f79859a8bb80a40832b521bdecf3fc8e77e53c7bf41398ea000d4e1c90189a
-  patches:
-    - patches/python313.patch
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install ./tryton --no-deps -vv
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python ${{ python_min }}.*
+    - python ==3.9
     - setuptools
   run:
-    - python >=${{ python_min }}<=3.11
+    - python ==3.9
     - cairo
     - python-dateutil
     - pygobject
