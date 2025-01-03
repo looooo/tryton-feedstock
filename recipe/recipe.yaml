@@ -10,7 +10,7 @@ source:
   url: https://github.com/tryton/tryton/archive/refs/tags/tryton-${{ version }}.tar.gz
   sha256: 41c6234d6db93a964bd08435b464b2ea58a4a5b25fe6793e9ea14af8522d1a45
   patches:
-    - python313.patch
+    - patches/python313.patch
 
 build:
   number: 0
