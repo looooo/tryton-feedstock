@@ -18,13 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python ==3.9
+    - python >=3.9,<3.10
     - setuptools
   run:
-    - python ==3.9
-    - cairo
+    - python >=3.9,<3.10
+    - cairo >=1.16,<1.17
     - python-dateutil
-    - pygobject
+    - pygobject <=3.44,<3.45
     - gtk3
     - librsvg
 
@@ -36,7 +36,7 @@ tests:
 
 about:
   license: GPL-3.0-or-later
-  license_file: tryton/COPYRIGHT
+  license_file: LICENSE
   summary: Tryton is business software, ideal for companies of any size, easy to use, complete and 100% Open Source.
   homepage: https://www.tryton.org/
   repository: https://github.com/tryton/tryton
