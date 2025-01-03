@@ -1,6 +1,6 @@
 context:
   name: tryton
-  version: 7.4.2
+  version: 7.4.3
 
 package:
   name: ${{ name }}
@@ -8,10 +8,12 @@ package:
 
 source:
   url: https://github.com/tryton/tryton/archive/refs/tags/tryton-${{ version }}.tar.gz
-  sha256: 5cf1435ccef620e09783462f03c2d4b383c28af88af91a608210d85bf9d256e6
+  sha256: 41c6234d6db93a964bd08435b464b2ea58a4a5b25fe6793e9ea14af8522d1a45
+  patches:
+    - python313.patch
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install ./tryton --no-deps -vv
 
