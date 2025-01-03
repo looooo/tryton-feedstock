@@ -13,7 +13,7 @@ source:
     - python313.patch
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install ./tryton --no-deps -vv
 
