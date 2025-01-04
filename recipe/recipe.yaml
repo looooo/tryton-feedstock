@@ -1,6 +1,6 @@
 context:
   name: tryton
-  version: 6.2.12
+  version: 5.0.33
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/tryton/tryton/archive/refs/tags/tryton-${{ version }}.tar.gz
-  sha256: 34f79859a8bb80a40832b521bdecf3fc8e77e53c7bf41398ea000d4e1c90189a
+  sha256: c161a97bf9e0ee054d2289330a7b807190494c18fd7c073702c48c71f70a77e6
 
 build:
   number: 0
@@ -18,10 +18,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9,<3.10
+    - python >=3.6,<3.7
     - setuptools
   run:
-    - python >=3.9,<3.10
+    - python >=3.6,<3.7
     - cairo >=1.16,<1.17
     - python-dateutil
     - pygobject <=3.44,<3.45
