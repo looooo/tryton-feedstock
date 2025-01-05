@@ -11,17 +11,17 @@ source:
   sha256: c161a97bf9e0ee054d2289330a7b807190494c18fd7c073702c48c71f70a77e6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6,<3.7
+    - python >=3.7,<3.8
     - setuptools
   run:
-    - python >=3.6,<3.7
+    - python >=3.7,<3.8
     - cairo >=1.16,<1.17
     - python-dateutil
     - pygobject <=3.44,<3.45
