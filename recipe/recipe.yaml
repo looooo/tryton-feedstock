@@ -11,9 +11,10 @@ source:
   sha256: 33777c568a697ff0a9e837da608b4546825926ce028580e18e32a5a79b7d47e3
   patches:
     - patches/python313.patch
+    - patches/entry_points.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install ./tryton --no-deps -vv
 
